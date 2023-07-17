@@ -19,7 +19,7 @@ public class CounterServiceImpl implements CounterService {
         var counter = counterRepository.findById(counterId).orElseThrow(() -> {
             throw new CounterNotFoundException("No Counter with such id were found");
         });
-        counter.setValue(value);
+        counter.setVal(value);
         counterRepository.saveAndFlush(counter);
         return value;
     }

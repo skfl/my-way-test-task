@@ -24,8 +24,8 @@ public class Counter {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "value")
-    private int value;
+    @Column(name = "val")
+    private int val;
 
     @Version
     private int version;
