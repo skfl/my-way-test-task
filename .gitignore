@@ -2,6 +2,7 @@ node_modules
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
+.mvn
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -19,6 +20,9 @@ target/
 *.iws
 *.iml
 *.ipr
+
+### Vaadin Generated Sources ###
+frontend
 
 ### NetBeans ###
 /nbproject/private/
