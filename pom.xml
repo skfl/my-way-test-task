@@ -61,6 +61,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>MyWayTestTask</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -96,6 +97,25 @@
 								</goals>
 							</execution>
 						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.tomee.maven</groupId>
+						<artifactId>tomee-maven-plugin</artifactId>
+						<version>7.1.1</version>
+						<configuration>
+							<tomeeClassifier>webprofile</tomeeClassifier>
+							<context>ROOT</context>
+							<synchronization>
+								<extensions>
+									<extension>.class</extension>
+								</extensions>
+							</synchronization>
+							<reloadOnUpdate>true</reloadOnUpdate>
+							<systemVariables>
+								<openejb.system.apps>true</openejb.system.apps>
+								<tomee.serialization.class.blacklist>-</tomee.serialization.class.blacklist>
+							</systemVariables>
+						</configuration>
 					</plugin>
 				</plugins>
 			</build>
