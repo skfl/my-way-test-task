@@ -9,7 +9,8 @@
 Изменения должны сохранятся в БД автоматически при каждом изменении.
 Необходимо использовать binder и Spring Data.
 
-## Как запустить
+## Контакты 
+Edward Rogachkov https://t.me/ssskyfall
 
 ### Технический стек: Spring Boot, Spring Data, H2, Vaadin, Lombok
 
@@ -21,8 +22,8 @@ The value of the field can be changed manually by entering the desired value.
 Changes should be saved to the database automatically with each change.
 It is necessary to use binder and Spring Data.
 
-## How to run
-
+## Contacts
+Edward Rogachkov https://t.me/ssskyfall
 
 ### Technical stack: Spring Boot, Spring Data, H2, Vaadin, Lombok 
 
