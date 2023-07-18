@@ -1,12 +1,17 @@
 package com.skfl.mwtt.view;
 
-import com.vaadin.flow.component.html.H1;
+import com.skfl.mwtt.component.CounterEditor;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("")
 class MainView extends VerticalLayout {
-    MainView() {
-        add(new H1("Hello, world1eqweqewq"));
+
+    private final CounterEditor counterEditor;
+
+    public MainView(CounterEditor counterEditor) {
+        this.counterEditor = counterEditor;
+        add(counterEditor);
+        setAlignItems(Alignment.CENTER);
     }
 }
