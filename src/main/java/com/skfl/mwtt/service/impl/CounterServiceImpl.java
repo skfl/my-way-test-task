@@ -23,4 +23,24 @@ public class CounterServiceImpl implements CounterService {
         counterRepository.saveAndFlush(counter);
         return value;
     }
+
+    @Override
+    public int getCounterValue(Long id) {
+        var counter = counterRepository.findById(id).orElseThrow(() -> {
+            throw new CounterNotFoundException("No Counter with such id were found");
+        });
+        return counter.getVal();
+    }
+
+    @Override
+    public int increment(Long id) {
+        var counter = counterRepository.findById(id).orElseThrow(() -> {
+            throw new CounterNotFoundException("No Counter with such id were found");
+        });
+
+        var newVal = counter.getVal() + 1;
+        counter.setVal(newVal);
+        counterRepository.saveAndFlush(counter);
+        return newVal;
+    }
 }
